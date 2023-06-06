@@ -1,14 +1,24 @@
-  
-  <div class="majorTicks"></div>
-  <div class="marking"></div>
-  <br>
-  <h5>Custom Ruler Scale</h5>
+<div class="majorTicks"></div>
+<div class="marking"></div>
+<br><br><br>
+<h1>Custom Ruler Scale</h1>
 
-  <label for="majorTicks">Choose Major Ticks</label>
-
-  <select name="majorTicks" id="majorTicks">
-    <option value="3">3</option>
-    <option value="5">5</option>
-    <option value="10">10</option>
+<div>
+  <label for="scaleLength">Choose Scale Length(cm)</label>&nbsp;
+  <input type="number" [(ngModel)]="scaleLength">
+  <br><br>
+  <label for="minorTicks">Choose Minor Ticks</label>&nbsp;
+  <select name="minorTicks" id="minorTicks" (change)="updateMinorTick($event)">
+    <option *ngFor="let item of minorTicks" value="{{ item }}">{{ item }}</option>
   </select>
+  &nbsp;&nbsp;&nbsp;
+  <label for="majorTicks">Choose Major Ticks</label>&nbsp;
+  <select name="majorTicks" id="majorTicks" (change)="updateMajorTick($event)">
+    <option *ngFor="let item of majorTicks" value="{{ item }}">{{ item }}</option>
+  </select>
+</div>
+
+<!-- Trial div -->
+<div>
   
+</div>

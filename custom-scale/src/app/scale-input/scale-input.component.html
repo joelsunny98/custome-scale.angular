@@ -1,12 +1,3 @@
-<!-- <div class="majorTicks"></div> -->
-  <!-- <div class="marking"></div> -->
-
-  <!-- <ul *ngIf="isScaleVisible" class="scale-ruler">
-    <li *ngFor="let item of getScaleRange()">{{ item }}</li>
-  </ul>
-
-
-<br><br><br>
 <h1>Custom Ruler Scale</h1>
 
 <div>
@@ -26,11 +17,11 @@
 <br><br>
 <div>
   <button onclick="isScaleVisible=true">Generate List</button>
-</div> -->
-
-<!-- Trial div -->
-<div>
-  {{ scaleLength }}
-  {{ majorTick }}
-  {{ minorTick }}
 </div>
+
+<div>
+    <app-ruler [scaleLength]="scaleLength" [majorTick]="selectedMajorTick" [minorTick]="selectedMinorTick"></app-ruler>
+</div>
+
+
+

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-ruler',
@@ -6,17 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./ruler.component.css']
 })
 export class RulerComponent {
-  minorTicks = [1, 3, 5, 10];
-  majorTicks = [10, 100, 1000, 10000];
-  selectedMinorTick!: number;
-  selectedMajorTick!: number;
-  scaleLength!: number;
+ 
+  @Input() scaleLength!: number;
 
-  updateMinorTick(e: any) {
-    this.selectedMinorTick = e.target.value
-  }
+  @Input() majorTick!: number;
 
-  updateMajorTick(e: any) {
-    this.selectedMajorTick = e.target.value
-  }
+  @Input() minorTick!: number;
+
+
+
+  // getScaleRange(): number[] {
+  //   // const points = Array.from({ length: this.scaleLength + 1 }, (_, index) => index);
+
+  //   const points = Array.from({ length: Math.floor(this.scaleLength / this.selectedMajorTick) + 1 }, (_, index) => index * this.selectedMajorTick);
+
+  //   // const points: number[] = [];
+  //   // for (let i = 0; i <= this.scaleLength; i += this.selectedMajorTick) {
+  //   //   if (this.selectedMajorTick / i === 0) {
+  //   //     points.push(i);
+  //   //   }
+  //   // }
+
+  //   console.warn(points)
+  //   return points
+  // }
 }

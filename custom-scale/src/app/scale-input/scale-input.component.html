@@ -1,24 +1,33 @@
-<h1>Custom Ruler Scale</h1>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-<div>
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand text-white">Custom Ruler Scale</a>
+    </div>
+  </nav>
+
+<br><br>
+
+<div align="left">
     <label for="scaleLength">Choose Scale Length(cm)</label>&nbsp;
     <input type="number" [(ngModel)]="scaleLength">
     <br><br>
     <label for="minorTicks">Choose Minor Ticks</label>&nbsp;
-    <select name="minorTicks" id="minorTicks" (ngModelchange)="updateMinorTick($event)">
+    <select name="minorTicks" id="minorTicks" (change)="updateMinorTick($event)">
         <option *ngFor="let item of minorTicks" value="{{ item }}">{{ item }}</option>
     </select>
     &nbsp;&nbsp;&nbsp;
     <label for="majorTicks">Choose Major Ticks</label>&nbsp;
-    <select name="majorTicks" id="majorTicks" (ngModelchange)="updateMajorTick($event)">
+    <select name="majorTicks" id="majorTicks" (change)="updateMajorTick($event)">
         <option *ngFor="let item of majorTicks" value="{{ item }}">{{ item }}</option>
     </select>
+    <br><br>
+    <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;<button (click)="makeVisible()">Generate Scale</button>
+    </div>
 </div>
 <br><br>
-<div>
-    <button (click)="makeVisible()">Generate Scale</button>
-</div>
-
 <div *ngIf="isScaleVisible">
     <app-ruler [scaleLength]="scaleLength" [majorTick]="selectedMajorTick" [minorTick]="selectedMinorTick"></app-ruler>
 </div>

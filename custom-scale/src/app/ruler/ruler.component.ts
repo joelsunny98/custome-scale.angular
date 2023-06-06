@@ -18,7 +18,7 @@ export class RulerComponent implements OnInit {
 
   ngOnInit(): void {
     this.minor = Array.from({ length: this.minorTick }, (_, index) => index);
-    this.major = Array.from({ length: Math.floor(this.scaleLength / this.majorTick) }, (_, index) => index * this.majorTick);
+    this.major = Array.from({ length: Math.floor(this.scaleLength / this.majorTick) + 1 }, (_, index) => index * this.majorTick);
     console.log(this.minor, this.major)
   }
 }

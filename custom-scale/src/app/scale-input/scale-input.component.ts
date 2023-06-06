@@ -14,7 +14,7 @@ export class ScaleInputComponent {
   isScaleVisible = false;
 
   updateMinorTick(e: any) {
-    this.selectedMinorTick = parseInt(e.target.value)
+    this.selectedMinorTick = parseInt(e.target.value);
   }
 
   updateMajorTick(e: any) {

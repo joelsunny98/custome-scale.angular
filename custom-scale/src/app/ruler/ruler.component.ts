@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./ruler.component.css']
 })
 export class RulerComponent {
-
 }

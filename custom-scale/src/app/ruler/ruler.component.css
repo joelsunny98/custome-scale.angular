@@ -12,8 +12,9 @@ h1 {
 .ruler-container {
   position: relative;
   overflow: auto;
-  width: 100%;
+  width: 150px;
   height: 350px;
+  background-color: lightgray;
 }
 
 .ruler-minor,

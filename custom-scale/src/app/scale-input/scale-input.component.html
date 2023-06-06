@@ -1,0 +1,24 @@
+<h1>Custom Ruler Scale</h1>
+
+<div>
+    <label for="scaleLength">Choose Scale Length(cm)</label>&nbsp;
+    <input type="number" [(ngModel)]="scaleLength">
+    <br><br>
+    <label for="minorTicks">Choose Minor Ticks</label>&nbsp;
+    <select name="minorTicks" id="minorTicks" (ngModelchange)="updateMinorTick($event)">
+        <option *ngFor="let item of minorTicks" value="{{ item }}">{{ item }}</option>
+    </select>
+    &nbsp;&nbsp;&nbsp;
+    <label for="majorTicks">Choose Major Ticks</label>&nbsp;
+    <select name="majorTicks" id="majorTicks" (ngModelchange)="updateMajorTick($event)">
+        <option *ngFor="let item of majorTicks" value="{{ item }}">{{ item }}</option>
+    </select>
+</div>
+<br><br>
+<div>
+    <button (click)="makeVisible()">Generate Scale</button>
+</div>
+
+<div *ngIf="isScaleVisible">
+    <app-ruler [scaleLength]="scaleLength" [majorTick]="selectedMajorTick" [minorTick]="selectedMinorTick"></app-ruler>
+</div>

@@ -1,55 +1,26 @@
-
+label,
 h1 {
   font-family: Arial, sans-serif;
 }
 
-label {
-  font-family: Arial, sans-serif;
+.ruler-major,
+.ruler-minor {
+  font-family: 'Roboto', sans-serif;
+  font-size: small;
 }
 
-  .marking {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 75px;
-    overflow: auto;
+.ruler-container {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  height: 350px;
+}
 
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 150%;
-      height: 100%;
-      background-image: 
-        linear-gradient(to right, #000000 1px, transparent 1px),
-        linear-gradient(to right, #ff0000 1px, transparent 1px);
-      background-size: 100px 60%, 10px 30%;
-      background-repeat: repeat-x;
-      background-position: bottom left;
-    }
-  }
+.ruler-minor,
+.ruler-major {
+  position: relative;
+}
 
-  /* .majorTicks {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 10%;
-    overflow: auto;
-
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 150%;
-      height: 100%;
-      background-image:
-        linear-gradient(to right, #ff0000 1px, transparent 1px);
-      background-size: 10px 30%;
-      background-repeat: repeat-x;
-      background-position: bottom left;
-    }
-  } */
+.ruler-major {
+  position: relative;
+}

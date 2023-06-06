@@ -1,36 +1,5 @@
-<!-- <div class="majorTicks"></div> -->
-  <!-- <div class="marking"></div> -->
-
-  <!-- <ul *ngIf="isScaleVisible" class="scale-ruler">
-    <li *ngFor="let item of getScaleRange()">{{ item }}</li>
-  </ul>
-
-
-<br><br><br>
-<h1>Custom Ruler Scale</h1>
-
-<div>
-  <label for="scaleLength">Choose Scale Length(cm)</label>&nbsp;
-  <input type="number" [(ngModel)]="scaleLength">
-  <br><br>
-  <label for="minorTicks">Choose Minor Ticks</label>&nbsp;
-  <select name="minorTicks" id="minorTicks" (change)="updateMinorTick($event)">
-    <option *ngFor="let item of minorTicks" value="{{ item }}">{{ item }}</option>
-  </select>
-  &nbsp;&nbsp;&nbsp;
-  <label for="majorTicks">Choose Major Ticks</label>&nbsp;
-  <select name="majorTicks" id="majorTicks" (change)="updateMajorTick($event)">
-    <option *ngFor="let item of majorTicks" value="{{ item }}">{{ item }}</option>
-  </select>
-</div>
-<br><br>
-<div>
-  <button onclick="isScaleVisible=true">Generate List</button>
-</div> -->
-
-<!-- Trial div -->
-<div>
-  {{ scaleLength }}
-  {{ majorTick }}
-  {{ minorTick }}
+<div class="ruler-container">
+  <div class="ruler-major" *ngFor="let item of major">____{{ item }}
+    <div class="ruler-minor" *ngFor="let item of minor">__</div>
+  </div>
 </div>

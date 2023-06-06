@@ -10,14 +10,18 @@ export class ScaleInputComponent {
   majorTicks = [10, 100, 1000, 10000];
   selectedMinorTick: number = 3;
   selectedMajorTick: number = 10;
-  scaleLength!: number;
+  scaleLength: number = 0;
   isScaleVisible = false;
 
   updateMinorTick(e: any) {
-    this.selectedMinorTick = e.target.value
+    this.selectedMinorTick = parseInt(e.target.value)
   }
 
   updateMajorTick(e: any) {
-    this.selectedMajorTick = e.target.value;
+    this.selectedMajorTick = parseInt(e.target.value);
+  }
+
+  makeVisible(){
+    this.isScaleVisible = !this.isScaleVisible;
   }
 }

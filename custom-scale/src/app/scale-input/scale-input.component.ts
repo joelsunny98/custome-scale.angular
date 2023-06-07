@@ -12,6 +12,9 @@ export class ScaleInputComponent {
   scaleLength = 0;
   isScaleVisible = false;
 
+  /**
+   * Method to make child component visible
+   */
   makeVisible() {
     this.isScaleVisible = !this.isScaleVisible;
   }

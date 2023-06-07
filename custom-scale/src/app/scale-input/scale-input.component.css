@@ -1,8 +1,9 @@
 label,
 .custom-font {
-    font-family: sans-serif; 
-    color:brown;
+    font-family: sans-serif;
+    color: brown;
 }
+
 button:hover,
 button:focus {
     background-color: #16437E;
@@ -12,7 +13,7 @@ button:focus {
 button:active {
     background: #09223b;
     color: rgb(255, 255, 255, .7);
-    
+
 }
 
 button:disabled {
@@ -26,9 +27,9 @@ button:disabled {
     align-items: center;
 }
 
-.container{
+.container {
     align-items: center;
     display: flex;
     justify-content: center;
-    padding-top:30px;
+    padding-top: 30px;
 }

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 @Component({
   selector: 'app-scale-input',
   templateUrl: './scale-input.component.html',
@@ -8,20 +7,12 @@ import { Component } from '@angular/core';
 export class ScaleInputComponent {
   minorTicks = [];
   majorTicks = [];
-  selectedMinorTick!: number;
-  selectedMajorTick!: number;
-  scaleLength!: number;
+  selectedMinorTick = 0;
+  selectedMajorTick = 0;
+  scaleLength = 0;
   isScaleVisible = false;
 
-  updateMinorTick(e: any) {
-    this.selectedMinorTick = parseInt(e.target.value);
-  }
-
-  updateMajorTick(e: any) {
-    this.selectedMajorTick = parseInt(e.target.value);
-  }
-
-  makeVisible(){
+  makeVisible() {
     this.isScaleVisible = !this.isScaleVisible;
   }
 }

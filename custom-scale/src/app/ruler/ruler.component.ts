@@ -13,11 +13,11 @@ export class RulerComponent implements OnInit {
 
   @Input() minorTick!: number;
 
-  minor!: number[];
-  major!: number[]
+  minors!: number[];
+  majors!: number[]
 
   ngOnInit(): void {
-    this.minor = Array.from({ length: this.minorTick }, (_, index) => index);
-    this.major = Array.from({ length: Math.floor(this.scaleLength / this.majorTick) + 1 }, (_, index) => index * this.majorTick);
+    this.minors = Array.from({ length: this.minorTick }, (_, index) => index);
+    this.majors = Array.from({ length: Math.floor(this.scaleLength / this.majorTick) + 1 }, (_, index) => index * this.majorTick);
   }
 }

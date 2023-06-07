@@ -1,9 +1,8 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-
 <nav class="navbar navbar-dark bg-dark">
   <div class="container d-flex justify-content-center align-items-center">
-    <a class="navbar-brand text-white custom-font">CUSTOM RULER SCALE</a>
+    <a class="navbar-brand text-white custom-font">CUSTOM RULER</a>
   </div>
 </nav>
 
@@ -11,18 +10,21 @@
   <div class="row justify-content-between">
     <div class="col-sm">
       <label for="scaleLength">Scale Length(cm)</label>
-      <input type="number" class="form-control" [(ngModel)]="scaleLength" placeholder="Choose Scale Length (cm)">
+      <input type="number" class="form-control" [(ngModel)]="scaleLength" placeholder="Choose Scale Length (cm)"
+        id="scale-length">
     </div>
     <div class="col-sm">
       <label for="majorTicks">Major Ticks</label>
-      <input type="number" class="form-control" [(ngModel)]="selectedMajorTick" placeholder="Choose Major Ticks">
+      <input type="number" class="form-control" [(ngModel)]="selectedMajorTick" placeholder="Choose Major Ticks"
+        id="major-ticks">
     </div>
     <div class="col-sm">
       <label for="minorTicks">Minor Ticks</label>
-      <input type="number" class="form-control" [(ngModel)]="selectedMinorTick" placeholder="Choose Minor Ticks">
+      <input type="number" class="form-control" [(ngModel)]="selectedMinorTick" placeholder="Choose Minor Ticks"
+        id="minor-ticks">
     </div>
     <div class="ruler-button col-12 d-flex justify-content-center align-items-center">
-      <button type="button" class="btn btn-info" id=ruler-Button (click)="makeVisible()">Generate Ruler Scale</button>
+      <button type="button" class="btn btn-info" id="ruler-Button" (click)="makeVisible()">Generate Ruler</button>
     </div>
   </div>
 </div>

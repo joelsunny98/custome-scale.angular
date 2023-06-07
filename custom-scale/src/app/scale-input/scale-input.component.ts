@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 export class ScaleInputComponent {
   minorTicks = [];
   majorTicks = [];
-  selectedMinorTick = 0;
-  selectedMajorTick = 0;
-  scaleLength = 0;
+  selectedMinorTick!: number;
+  selectedMajorTick!: number;
+  scaleLength!: number;
   isScaleVisible = false;
 
   /**

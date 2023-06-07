@@ -14,7 +14,7 @@ export class RulerComponent implements OnInit {
   @Input() minorTick!: number;
 
   minors!: number[];
-  majors!: number[]
+  majors!: number[];
 
   ngOnInit(): void {
     this.minors = Array.from({ length: this.minorTick }, (_, index) => index);

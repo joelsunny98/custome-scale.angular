@@ -10,7 +10,7 @@ export class ScaleInputComponent {
   majorTicks = [];
   selectedMinorTick!: number;
   selectedMajorTick!: number;
-  scaleLength: number = 0;
+  scaleLength!: number;
   isScaleVisible = false;
 
   updateMinorTick(e: any) {

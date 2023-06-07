@@ -2,35 +2,30 @@
 
 
 <nav class="navbar navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand text-white">Custom Ruler Scale</a>
+  <div class="container d-flex justify-content-center align-items-center">
+    <a class="navbar-brand text-white custom-font">CUSTOM RULER SCALE</a>
   </div>
 </nav>
 
 <div class="container">
-  <div class="card">
-    <div class="card-body">
-      <div class="row">
-        <div class="col-4">
-          <label for="scaleLength">Choose Scale Length(cm)</label>
-          <input type="number" [(ngModel)]="scaleLength">
-        </div>
-        <div class="col-4">
-          <label for="majorTicks">Choose Major Ticks</label>
-          <input type="number" [(ngModel)]="selectedMajorTick">
-        </div>
-        <div class="col-4">
-          <label for="minorTicks">Choose Minor Ticks</label>
-          <input type="number" [(ngModel)]="selectedMinorTick">
-        </div>
-      </div>
-      <div class="row">
-        <button (click)="makeVisible()">Generate Ruler Scale</button>
-      </div>
-      </div>
+  <div class="row justify-content-between">
+    <div class="col-sm">
+      <label for="scaleLength">Scale Length(cm)</label>
+      <input type="number" class="form-control" [(ngModel)]="scaleLength" placeholder="Choose Scale Length (cm)">
+    </div>
+    <div class="col-sm">
+      <label for="majorTicks">Major Ticks</label>
+      <input type="number" class="form-control" [(ngModel)]="selectedMajorTick" placeholder="Choose Major Ticks">
+    </div>
+    <div class="col-sm">
+      <label for="minorTicks">Minor Ticks</label>
+      <input type="number" class="form-control" [(ngModel)]="selectedMinorTick" placeholder="Choose Minor Ticks">
+    </div>
+    <div class="ruler-button col-12 d-flex justify-content-center align-items-center">
+      <button type="button" class="btn btn-info" id=ruler-Button (click)="makeVisible()">Generate Ruler Scale</button>
     </div>
   </div>
-
+</div>
 
 <div *ngIf="isScaleVisible">
   <app-ruler [scaleLength]="scaleLength" [majorTick]="selectedMajorTick" [minorTick]="selectedMinorTick"></app-ruler>

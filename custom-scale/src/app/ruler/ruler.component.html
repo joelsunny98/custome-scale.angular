@@ -1,10 +1,12 @@
-<div class="ruler">
-  <div class="ruler-container">
-    <div class="ruler-major" *ngFor="let item of major">
-      <div class="item-container">
-        <span class="item-text"> {{ item }}</span>
+<div class="container">
+      <div class="ruler">
+        <div class="ruler-container">
+          <div class="ruler-major" *ngFor="let item of major">
+            <div class="item-container">
+              <span class="item-text"> {{ item }}</span>
+            </div>
+            <span class="ruler-minor" *ngFor="let item of minor"></span>
+          </div>
+        </div>
       </div>
-      <span class="ruler-minor" *ngFor="let item of minor"></span>
     </div>
-  </div>
-</div>

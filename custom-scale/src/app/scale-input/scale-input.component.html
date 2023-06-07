@@ -2,32 +2,36 @@
 
 
 <nav class="navbar navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand text-white">Custom Ruler Scale</a>
-    </div>
-  </nav>
+  <div class="container">
+    <a class="navbar-brand text-white">Custom Ruler Scale</a>
+  </div>
+</nav>
 
-<br><br>
-
-<div align="left">
-    <label for="scaleLength">Choose Scale Length(cm)</label>&nbsp;
-    <input type="number" [(ngModel)]="scaleLength">
-    <br><br>
-    <label for="minorTicks">Choose Minor Ticks</label>&nbsp;
-    <select name="minorTicks" id="minorTicks" (change)="updateMinorTick($event)">
-        <option *ngFor="let item of minorTicks" value="{{ item }}">{{ item }}</option>
-    </select>
-    &nbsp;&nbsp;&nbsp;
-    <label for="majorTicks">Choose Major Ticks</label>&nbsp;
-    <select name="majorTicks" id="majorTicks" (change)="updateMajorTick($event)">
-        <option *ngFor="let item of majorTicks" value="{{ item }}">{{ item }}</option>
-    </select>
-    <br><br>
-    <div>
-        &nbsp;&nbsp;&nbsp;&nbsp;<button (click)="makeVisible()">Generate Scale</button>
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-4">
+          <label for="scaleLength">Choose Scale Length(cm)</label>
+          <input type="number" [(ngModel)]="scaleLength">
+        </div>
+        <div class="col-4">
+          <label for="majorTicks">Choose Major Ticks</label>
+          <input type="number" [(ngModel)]="selectedMajorTick">
+        </div>
+        <div class="col-4">
+          <label for="minorTicks">Choose Minor Ticks</label>
+          <input type="number" [(ngModel)]="selectedMinorTick">
+        </div>
+      </div>
+      <div class="row">
+        <button (click)="makeVisible()">Generate Ruler Scale</button>
+      </div>
+      </div>
     </div>
-</div>
-<br><br>
+  </div>
+
+
 <div *ngIf="isScaleVisible">
-    <app-ruler [scaleLength]="scaleLength" [majorTick]="selectedMajorTick" [minorTick]="selectedMinorTick"></app-ruler>
+  <app-ruler [scaleLength]="scaleLength" [majorTick]="selectedMajorTick" [minorTick]="selectedMinorTick"></app-ruler>
 </div>

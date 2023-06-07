@@ -3,25 +3,73 @@ h1 {
   font-family: Arial, sans-serif;
 }
 
-.ruler-major,
-.ruler-minor {
-  font-family: 'Roboto', sans-serif;
-  font-size: small;
-}
 
 .ruler-container {
   position: relative;
   overflow: auto;
-  width: 150px;
-  height: 350px;
-  background-color: lightgray;
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+  margin: 0;
+  padding: 0;
+  height: 65vh;
 }
 
-.ruler-minor,
-.ruler-major {
-  position: relative;
+.ruler-minor {
+  height: 20px;
+  width: 1px;
+  background-color: rgb(121, 7, 7);
+  text-align: center;
+  margin-right: 10px;
+}
+
+.item-text {
+  padding-top: 50px;
+  white-space: nowrap;
 }
 
 .ruler-major {
   position: relative;
+  display:flex;
+}
+
+.ruler {
+  height: 100%;
+  position: relative;
+  border-top: 3px solid #4108a4;
+  margin-top: 10px;
+  overflow-x: auto;
+  display: flex;
+  width: 100%;
+  align-items: center;
+} 
+
+.item-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 1.5px;
+  background-color: black;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.ruler-container::before,
+.ruler-container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.ruler-container::after {
+  clear: both;
+}
+
+.ruler-major:last-child {
+  margin-right: 0;
+}
+
+.ruler-major:last-child {
+  margin-right: 0;
 }

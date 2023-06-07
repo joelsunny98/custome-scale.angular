@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./scale-input.component.css']
 })
 export class ScaleInputComponent {
-  minorTicks = [3, 5, 10];
-  majorTicks = [10, 100, 1000, 10000];
-  selectedMinorTick: number = 3;
-  selectedMajorTick: number = 10;
+  minorTicks = [];
+  majorTicks = [];
+  selectedMinorTick!: number;
+  selectedMajorTick!: number;
   scaleLength: number = 0;
   isScaleVisible = false;
 

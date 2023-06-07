@@ -1,9 +1,9 @@
 <div class="ruler">
   <div class="ruler-container">
     <div class="ruler-major" *ngFor="let item of major">
-      <div class="vertical-line"> </div>
+      <div class="item-container">
         <span class="item-text"> {{ item }}</span>
-      
+      </div>
       <span class="ruler-minor" *ngFor="let item of minor"></span>
     </div>
   </div>

@@ -12,7 +12,10 @@ export class ScaleInputComponent {
   scaleLength = 0;
   isScaleVisible = false;
 
-  makeVisible() {
+  /**
+   * Method to make Ruler component visible
+   */
+  makeScaleVisible() {
     this.isScaleVisible = !this.isScaleVisible;
   }
 }

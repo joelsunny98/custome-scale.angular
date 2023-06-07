@@ -60,10 +60,6 @@
   clear: both;
 }
 
-.ruler-container::after {
-  clear: both;
-}
-
 .ruler-major:last-child {
   margin-right: 0;
 }

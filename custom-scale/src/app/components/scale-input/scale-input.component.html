@@ -9,7 +9,7 @@
         <div class="col-sm">
           <label for="scaleLength">Scale Length (cm)</label>
           <input type="number" class="form-control" formControlName="scaleLength" placeholder="Choose Scale Length (cm)"
-            id="scale-input-scale-length">
+            id="scale-input-scale-length" noNegative>
           <div *ngIf="scaleForm.get('scaleLength')?.hasError('required')&& scaleForm.get('scaleLength')?.touched"
             class="text-danger">Scale Length is required
           </div>
@@ -17,7 +17,7 @@
         <div class="col-sm">
           <label for="majorTicks">Major Ticks</label>
           <input type="number" class="form-control" formControlName="selectedMajorTick" placeholder="Choose Major Ticks"
-            id="scale-input-major-ticks">
+            id="scale-input-major-ticks" noNegative>
           <div
             *ngIf="scaleForm.get('selectedMajorTick')?.hasError('required') && scaleForm.get('selectedMajorTick')?.touched"
             class="text-danger">Major Ticks is required
@@ -26,7 +26,7 @@
         <div class="col-sm">
           <label for="minorTicks">Minor Ticks</label>
           <input type="number" class="form-control" formControlName="selectedMinorTick" placeholder="Choose Minor Ticks"
-            id="scale-input-minor-ticks">
+            id="scale-input-minor-ticks" noNegative>
           <div
             *ngIf="scaleForm.get('selectedMinorTick')?.hasError('required') && scaleForm.get('selectedMinorTick')?.touched"
             class="text-danger">Minor Ticks is required

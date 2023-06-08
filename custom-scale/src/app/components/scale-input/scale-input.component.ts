@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormGroup, FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RulerComponent } from '../ruler/ruler.component';
+import { NoNegativeDirective } from 'src/app/directives/no-negative.directive';
 
 @Component({
   selector: 'app-scale-input',
@@ -9,7 +10,8 @@ import { RulerComponent } from '../ruler/ruler.component';
   imports: [CommonModule,
     RulerComponent,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NoNegativeDirective
   ],
   templateUrl: './scale-input.component.html',
   styleUrls: ['./scale-input.component.css']

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormGroup, FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RulerComponent } from '../ruler/ruler.component';
-import { ButtonClickedPipe } from 'src/app/pipes/button-clicked.pipe';
 
 @Component({
   selector: 'app-scale-input',

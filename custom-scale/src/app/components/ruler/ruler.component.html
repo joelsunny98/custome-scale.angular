@@ -6,7 +6,7 @@
             <span class="item-text">{{ major }}</span>
           </div>
           <ng-container *ngIf="major !== scaleLength">
-            <span class="ruler-minor" *ngFor="let minor of minors"></span>
+            <span class="ruler-minor" *ngFor="let minor of minorTick | minorTicksArray"></span>
           </ng-container>
         </div>
       </div>

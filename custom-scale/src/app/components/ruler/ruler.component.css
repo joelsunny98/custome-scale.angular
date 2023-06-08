@@ -15,7 +15,7 @@
     width: 1px;
     background-color: #7d7d7d;
     text-align: center;
-    margin-right: 10px;
+    margin-right: 20px;
   }
   
   .item-text {
@@ -29,6 +29,7 @@
   .ruler-major {
     position: relative;
     display: flex;
+    margin-left: 5px;
   }
   
   .ruler {
@@ -40,6 +41,8 @@
     display: flex;
     width: 100%;
     align-items: center;
+    margin-left: 5px;
+    
   }
   
   .item-container {
@@ -50,7 +53,7 @@
     width: 1.5px;
     background-color: #7d7d7d;
     text-align: center;
-    margin-right: 10px;
+    margin-right: 20px;
   }
   
   .ruler-container::before,
@@ -62,4 +65,8 @@
   
   .ruler-major:last-child {
     margin-right: 0;
+  }
+
+  .container{
+    padding-top:100px;
   }

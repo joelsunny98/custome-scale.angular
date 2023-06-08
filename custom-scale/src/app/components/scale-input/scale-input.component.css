@@ -13,7 +13,6 @@ button:focus {
 button:active {
     background: #09223b;
     color: rgb(255, 255, 255, .7);
-
 }
 
 button:disabled {

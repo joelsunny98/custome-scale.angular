@@ -8,7 +8,7 @@ describe('RulerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RulerComponent ]
+      imports: [ RulerComponent ]
     })
     .compileComponents();
 

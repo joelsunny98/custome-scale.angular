@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./scale-input.component.css']
 })
 export class ScaleInputComponent {
-  minorTicks = [];
-  majorTicks = [];
   selectedMinorTick!: number;
   selectedMajorTick!: number;
   scaleLength!: number;

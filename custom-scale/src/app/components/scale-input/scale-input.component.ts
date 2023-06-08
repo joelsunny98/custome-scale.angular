@@ -1,18 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormGroup, FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RulerComponent } from '../ruler/ruler.component';
+import { ButtonClickedPipe } from 'src/app/pipes/button-clicked.pipe';
 
 @Component({
   selector: 'app-scale-input',
+  standalone: true,
+  imports: [CommonModule,
+    RulerComponent,
+    FormsModule,
+    ReactiveFormsModule
+  ],
   templateUrl: './scale-input.component.html',
   styleUrls: ['./scale-input.component.css']
 })
+export class ScaleInputComponent {
 
-export class ScaleInputComponent implements OnInit {
   selectedMinorTick!: number;
   selectedMajorTick!: number;
   scaleLength!: number;
   scaleForm!: FormGroup;
   isScaleVisible = false;
+  buttonClicked: boolean = false;
 
   constructor(private formBuilder: FormBuilder) { }
 

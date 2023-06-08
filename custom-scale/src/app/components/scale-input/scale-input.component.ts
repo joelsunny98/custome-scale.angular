@@ -41,11 +41,4 @@ export class ScaleInputComponent {
       selectedMinorTick: ['', Validators.required]
     });
   }
-
-  /**
- * Method to make Ruler component visible
- */
-  makeScaleVisible() {
-    this.isScaleVisible = !this.isScaleVisible;
-  }
 }

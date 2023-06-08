@@ -1,7 +1,7 @@
 label,
 .custom-font {
     font-family: sans-serif;
-    color: brown;
+    color: rgb(17, 12, 68);
 }
 
 button:hover,
@@ -22,8 +22,13 @@ button:disabled {
 }
 
 .ruler-button {
-    padding-top: 20px;
+    padding-top: 40px;
     align-items: center;
+    position: fixed;
+    bottom: 480px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999; 
 }
 
 .container {
@@ -31,4 +36,8 @@ button:disabled {
     display: flex;
     justify-content: center;
     padding-top: 30px;
+}
+
+.text-danger{
+    font-size: small;
 }

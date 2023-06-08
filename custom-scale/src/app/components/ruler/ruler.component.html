@@ -1,14 +1,14 @@
 <div class="container">
-    <div class="ruler">
-      <div class="ruler-container">
-        <div class="ruler-major" *ngFor="let major of majors">
-          <div class="item-container">
-            <span class="item-text">{{ major }}</span>
-          </div>
-          <ng-container *ngIf="major !== scaleLength">
-            <span class="ruler-minor" *ngFor="let minor of minorTick | minorTicksArray"></span>
-          </ng-container>
+  <div class="ruler">
+    <div class="ruler-container">
+      <div class="ruler-major" *ngFor="let major of majorTick | majorTicksArray: scaleLength">
+        <div class="item-container">
+          <span class="item-text">{{ major }}</span>
         </div>
+        <ng-container *ngIf="major !== scaleLength">
+          <span class="ruler-minor" *ngFor="let minor of minorTick | minorTicksArray"></span>
+        </ng-container>
       </div>
     </div>
   </div>
+</div>

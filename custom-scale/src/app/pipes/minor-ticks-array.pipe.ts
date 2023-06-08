@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'minorTicksArray',
-  standalone: true,
+  standalone: true
 })
 export class MinorTicksArrayPipe implements PipeTransform {
 

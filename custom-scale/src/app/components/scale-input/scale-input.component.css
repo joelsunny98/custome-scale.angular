@@ -22,13 +22,14 @@ button:disabled {
 }
 
 .ruler-button {
-    padding-top: 40px;
+    padding-top: 120px;
     align-items: center;
     position: fixed;
-    bottom: 480px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 9999; 
+    display: flex;
+    justify-content: center;
+    right: 45%;
+    
+
 }
 
 .container {
@@ -40,4 +41,12 @@ button:disabled {
 
 .text-danger{
     font-size: small;
+}
+
+.col-sm{
+    height: 20vh;
+}
+
+.row.justify-content-between{
+height : 100px;
 }

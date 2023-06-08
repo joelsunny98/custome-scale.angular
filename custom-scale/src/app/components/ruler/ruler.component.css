@@ -40,7 +40,6 @@
   display: flex;
   width: 100%;
   align-items: center;
-  margin-left: 5px;
 }
 
 .item-container {
@@ -52,6 +51,7 @@
   background-color: #7d7d7d;
   text-align: center;
   margin-right: 20px;
+
 }
 
 .ruler-container::before,

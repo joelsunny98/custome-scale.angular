@@ -10,8 +10,6 @@ export class NoNegativeDirective {
 
   @HostListener('input')
   onInput() {
-    const inputValue = this.el.nativeElement.value;
-    const allowedValue = inputValue.replace(/\D*/g, '');
-    this.el.nativeElement.value = allowedValue;
+    this.el.nativeElement.value = this.el.nativeElement.value.replace(/\D*/g, '');
   }
 }

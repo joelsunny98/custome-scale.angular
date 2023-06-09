@@ -16,9 +16,18 @@ import { MajorTicksArrayPipe } from 'src/app/pipes/major-ticks-array.pipe';
 })
 export class RulerComponent {
 
+  /**
+   * Input selector for max length of the sacle
+   */
   @Input() scaleLength!: number;
 
+  /**
+   * Input slector for the major tick mark
+   */
   @Input() majorTick!: number;
 
+  /**
+   * Input selector for the total minor ticks
+   */
   @Input() minorTick!: number;
 }

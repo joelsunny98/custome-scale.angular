@@ -23,7 +23,6 @@ export class ScaleInputComponent {
   scaleLength!: number;
   scaleForm!: FormGroup;
   isScaleVisible = false;
-  buttonClicked: boolean = false;
 
   constructor(private formBuilder: FormBuilder) { }
 

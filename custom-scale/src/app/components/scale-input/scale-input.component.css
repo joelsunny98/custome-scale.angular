@@ -28,9 +28,12 @@ button:disabled {
     display: flex;
     justify-content: center;
     right: 45%;
-    
-
 }
+
+.required-label::after {
+    content: "*";
+    color: red;
+  }
 
 .container {
     align-items: center;

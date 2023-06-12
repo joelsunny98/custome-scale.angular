@@ -7,7 +7,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class MinorTicksArrayPipe implements PipeTransform {
 
   transform(minorTick: number): number[] {
-    return Array.from({ length: minorTick }, (_, index) => index);
+    return Array.from({ length: minorTick - 1 }, (_, index) => index);
   }
 
 }

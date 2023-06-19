@@ -45,7 +45,7 @@ export class ScaleInputComponent {
    * Method to validate if major tick is greater than scale length
    *
    * @param control
-   * @returns 
+   * @returns boolean | null
    */
   scaleLenthGreaterThanMajorTickValidator(control: FormControl) {
     const form = control.parent

@@ -7,7 +7,7 @@
   <div class="container">
     <div class="row align-items-end">
       <div class="col-sm">
-        <label class="required" for="scaleLength">Scale Length (cm)*</label>
+        <label for="scaleLength" class="required-label">Scale Length (cm)</label>
         <div class="input-group">
           <input type="number" class="form-control" formControlName="scaleLength" placeholder="Choose Scale Length (cm)"
             id="scale-input-scale-length" (input)="isScaleVisible=false" noNegative>
@@ -19,7 +19,7 @@
 
       </div>
       <div class="col-sm">
-        <label for="majorTicks">Major Ticks*</label>
+        <label for="majorTicks" class="required-label">Major Ticks</label>
         <div class="input-group">
           <input type="number" class="form-control" formControlName="selectedMajorTick" placeholder="Choose Major Ticks"
             id="scale-input-major-ticks" (input)="isScaleVisible=false" noNegative>
@@ -31,7 +31,7 @@
 
       </div>
       <div class="col-sm">
-        <label for="minorTicks">Minor Ticks*</label>
+        <label for="minorTicks" class="required-label">Minor Ticks</label>
         <div class="input-group">
           <input type="number" class="form-control" formControlName="selectedMinorTick" placeholder="Choose Minor Ticks"
             id="scale-input-minor-ticks" (input)="isScaleVisible=false" noNegative>

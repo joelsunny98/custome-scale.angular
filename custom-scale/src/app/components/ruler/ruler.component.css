@@ -12,23 +12,23 @@
 
 .ruler-minor {
   height: 20px;
-  width: 1px;
+  width: 1.5px;
   background-color: #7d7d7d;
-  text-align: center;
   margin-right: 20px;
 }
 
 .item-text {
   padding-top: 50px;
-  white-space: nowrap;
   color: #161414;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
+
 }
 
-.ruler-major {
+.item-container{
   position: relative;
   display: flex;
+  margin-left: 0px;
   margin-left: 5px;
 }
 
@@ -42,7 +42,7 @@
   align-items: center;
 }
 
-.item-container {
+.ruler-major {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,7 +51,6 @@
   background-color: #7d7d7d;
   text-align: center;
   margin-right: 20px;
-
 }
 
 .ruler-container::before,
@@ -61,9 +60,9 @@
   clear: both;
 }
 
-.ruler-major:last-child {
+ .ruler-major:last-child {
   margin-right: 0;
-}
+} 
 
 .container {
   padding-top: 100px;

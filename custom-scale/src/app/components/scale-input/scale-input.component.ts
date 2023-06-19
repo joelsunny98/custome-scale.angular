@@ -34,20 +34,24 @@ export class ScaleInputComponent {
    */
   buildScaleForm() {
     this.scaleForm = this.formBuilder.group({
-      scaleLength: ['', [Validators.required, this.customValidator]],
-      selectedMajorTick: ['', [Validators.required, this.customValidator]],
+      scaleLength: ['', [Validators.required, this.scaleLenthGreaterThanMajorTickValidator]],
+      selectedMajorTick: ['', [Validators.required, this.scaleLenthGreaterThanMajorTickValidator]],
       selectedMinorTick: ['', Validators.required]
     },
     );
   }
 
-  customValidator(control: FormControl)
-  {
+  /**
+   * Method to validate if major tick is greater than scale length
+   *
+   * @param control
+   * @returns 
+   */
+  scaleLenthGreaterThanMajorTickValidator(control: FormControl) {
     const form = control.parent
     const scale = form?.get('scaleLength')?.value;
     const major = form?.get('selectedMajorTick')?.value;
 
-    return scale && major && scale<=major?{'valid': true}: null
+    return scale && major && scale <= major ? { 'valid': true } : null
   }
-
 }

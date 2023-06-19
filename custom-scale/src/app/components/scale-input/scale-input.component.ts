@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormGroup, FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormsModule, ReactiveFormsModule, ValidatorFn, AbstractControl, FormControl } from '@angular/forms';
 import { RulerComponent } from '../ruler/ruler.component';
 import { NoNegativeDirective } from 'src/app/directives/no-negative.directive';
 
@@ -18,8 +18,7 @@ import { NoNegativeDirective } from 'src/app/directives/no-negative.directive';
 })
 export class ScaleInputComponent {
 
-  selectedMinorTick!: number;
-  selectedMajorTick!: number;
+
   scaleLength!: number;
   scaleForm!: FormGroup;
   isScaleVisible = false;
@@ -35,9 +34,20 @@ export class ScaleInputComponent {
    */
   buildScaleForm() {
     this.scaleForm = this.formBuilder.group({
-      scaleLength: ['', Validators.required],
-      selectedMajorTick: ['', Validators.required],
+      scaleLength: ['', [Validators.required, this.customValidator]],
+      selectedMajorTick: ['', [Validators.required, this.customValidator]],
       selectedMinorTick: ['', Validators.required]
-    });
+    },
+    );
   }
+
+  customValidator(control: FormControl)
+  {
+    const form = control.parent
+    const scale = form?.get('scaleLength')?.value;
+    const major = form?.get('selectedMajorTick')?.value;
+
+    return scale && major && scale<=major?{'valid': true}: null
+  }
+
 }

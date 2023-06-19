@@ -16,6 +16,10 @@
           *ngIf="scaleForm.get('scaleLength')?.hasError('required') && scaleForm.get('scaleLength')?.touched">
           Scale Length is required
         </div>
+        <div class="text-danger"
+          *ngIf="scaleForm.get('scaleLength')?.hasError('valid') && scaleForm.get('scaleLength')?.touched">
+          Scale length must be more thean the major tick
+        </div>
 
       </div>
       <div class="col-sm">
@@ -27,6 +31,10 @@
         <div class="text-danger"
           *ngIf="scaleForm.get('selectedMajorTick')?.hasError('required') && scaleForm.get('selectedMajorTick')?.touched">
           Major Ticks is required
+        </div>
+        <div class="text-danger"
+          *ngIf="scaleForm.get('selectedMajorTick')?.hasError('valid') && scaleForm.get('selectedMajorTick')?.touched">
+          Major Ticks must be less than the scale length
         </div>
 
       </div>
@@ -40,7 +48,6 @@
           *ngIf="scaleForm.get('selectedMinorTick')?.hasError('required') && scaleForm.get('selectedMinorTick')?.touched">
           Minor Ticks is required
         </div>
-
       </div>
       <div class="ruler-button">
         <button type="submit" class="btn btn-info" id="scale-input-ruler-Button" [disabled]="scaleForm.invalid">

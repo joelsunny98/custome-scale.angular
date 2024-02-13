@@ -1,0 +1,64 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container d-flex justify-content-center align-items-center">
+    <h1 class="navbar-brand text-white custom-font">CUSTOM RULER</h1>
+  </div>
+</nav>
+<form [formGroup]="scaleForm" (ngSubmit)="isScaleVisible=true">
+  <div class="container">
+    <div class="row align-items-end">
+      <div class="col-sm">
+        <label for="scaleLength" class="required-label">Scale Length (cm)</label>
+        <div class="input-group">
+          <input type="number" class="form-control" formControlName="scaleLength" placeholder="Choose Scale Length (cm)"
+            id="scale-input-scale-length" (input)="isScaleVisible=false" noNegative>
+        </div>
+        <div class="text-danger"
+          *ngIf="scaleForm.get('scaleLength')?.hasError('required') && scaleForm.get('scaleLength')?.touched">
+          Scale Length is required
+        </div>
+        <div class="text-danger"
+          *ngIf="scaleForm.get('scaleLength')?.hasError('valid') && scaleForm.get('scaleLength')?.touched">
+          Scale length must be more thean the major tick
+        </div>
+
+      </div>
+      <div class="col-sm">
+        <label for="majorTicks" class="required-label">Major Ticks</label>
+        <div class="input-group">
+          <input type="number" class="form-control" formControlName="selectedMajorTick" placeholder="Choose Major Ticks"
+            id="scale-input-major-ticks" (input)="isScaleVisible=false" noNegative>
+        </div>
+        <div class="text-danger"
+          *ngIf="scaleForm.get('selectedMajorTick')?.hasError('required') && scaleForm.get('selectedMajorTick')?.touched">
+          Major Ticks is required
+        </div>
+        <div class="text-danger"
+          *ngIf="scaleForm.get('selectedMajorTick')?.hasError('valid') && scaleForm.get('selectedMajorTick')?.touched">
+          Major Ticks must be less than the scale length
+        </div>
+
+      </div>
+      <div class="col-sm">
+        <label for="minorTicks" class="required-label">Minor Ticks</label>
+        <div class="input-group">
+          <input type="number" class="form-control" formControlName="selectedMinorTick" placeholder="Choose Minor Ticks"
+            id="scale-input-minor-ticks" (input)="isScaleVisible=false" noNegative>
+        </div>
+        <div class="text-danger"
+          *ngIf="scaleForm.get('selectedMinorTick')?.hasError('required') && scaleForm.get('selectedMinorTick')?.touched">
+          Minor Ticks is required
+        </div>
+      </div>
+      <div class="ruler-button">
+        <button type="submit" class="btn btn-info" id="scale-input-ruler-Button" [disabled]="scaleForm.invalid">
+          Generate Ruler
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<div *ngIf="isScaleVisible">
+  <app-ruler [scaleLength]="scaleForm.get('scaleLength')?.value" [majorTick]="scaleForm.get('selectedMajorTick')?.value"
+    [minorTick]="scaleForm.get('selectedMinorTick')?.value"></app-ruler>
+</div>

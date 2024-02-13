@@ -1,0 +1,55 @@
+label,
+.custom-font {
+    font-family: sans-serif;
+    color: rgb(17, 12, 68);
+}
+
+button:hover,
+button:focus {
+    background-color: #16437E;
+    color: #ffffff;
+}
+
+button:active {
+    background: #09223b;
+    color: rgb(255, 255, 255, .7);
+}
+
+button:disabled {
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, .08);
+    color: rgba(0, 0, 0, .3);
+}
+
+.ruler-button {
+    padding-top: 120px;
+    align-items: center;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    right: 45%;
+}
+
+.required-label::after {
+    content: "*";
+    color: red;
+  }
+
+.container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.text-danger{
+    font-size: small;
+}
+
+.col-sm{
+    height: 20vh;
+}
+
+.row.justify-content-between{
+height : 100px;
+}
